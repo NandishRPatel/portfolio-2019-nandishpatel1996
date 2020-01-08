@@ -1,0 +1,3 @@
+*.json
+*-checkpoint.ipynb
+__pycache__/

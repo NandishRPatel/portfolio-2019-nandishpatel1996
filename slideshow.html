@@ -1,0 +1,38 @@
+<html>
+    <!--p>Some of the code is taken from w3school(https://www.w3schools.com/w3css/w3css_slideshow.asp)</p-->
+    <head>
+        <style>.slides {display: none;}</style>
+    </head>
+
+    <body>
+        
+        <div style="max-width : 700px">
+            <img class="slides" src="Portfolio3/html/images/0.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/1.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/2.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/3.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/4.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/5.png" style="width:1000">
+            <img class="slides" src="Portfolio3/html/images/6.png" style="width:1000">
+        </div>
+
+        <script>
+            var id = 0;
+            carousel();
+
+            function carousel() {
+              var i;
+              var slide = document.getElementsByClassName("slides");
+              for (i = 0; i < slide.length; i++) {
+                slide[i].style.display = "none";
+              }
+              id++;
+              if (id > slide.length) {id = 1}
+              slide[id-1].style.display = "block";
+              setTimeout(carousel, 2000);
+            }
+        </script>
+
+    </body>
+    
+</html>
